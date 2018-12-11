@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
+    tools:context=".RegisterActivity">
+
+
+    <EditText
+        android:id="@+id/username_editText_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="168dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_editText_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:text="1208@gmail.com"
+        app:layout_constraintEnd_toEndOf="@+id/username_editText_register"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username_editText_register"
+        app:layout_constraintTop_toBottomOf="@+id/username_editText_register" />
+
+    <EditText
+        android:id="@+id/password_editText_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:text="12081208"
+        app:layout_constraintEnd_toEndOf="@+id/email_editText_register"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_editText_register"
+        app:layout_constraintTop_toBottomOf="@+id/email_editText_register" />
+
+    <Button
+        android:id="@+id/register_button_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/register"
+
+        app:layout_constraintEnd_toEndOf="@+id/password_editText_register"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/password_editText_register"
+        app:layout_constraintTop_toBottomOf="@+id/password_editText_register" />
+
+    <TextView
+        android:id="@+id/already_hava_an_account_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/already_have_an_account"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/register_button_register"
+        app:layout_constraintStart_toStartOf="@+id/register_button_register"
+        app:layout_constraintTop_toBottomOf="@+id/register_button_register" />
+
+    <Button
+        android:id="@+id/selectphoto_button_register"
+        android:layout_width="128dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="66dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/main_photoedit_button"
+        android:text="Select Photo"
+        app:layout_constraintBottom_toTopOf="@+id/username_editText_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.373" />
+    //網路上的circlephoto模組
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/selectphoto_imageview_register"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@android:color/white"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/selectphoto_button_register"
+        app:layout_constraintEnd_toEndOf="@+id/selectphoto_button_register"
+        app:layout_constraintStart_toStartOf="@+id/selectphoto_button_register"
+        app:layout_constraintTop_toTopOf="@+id/selectphoto_button_register" />
+</android.support.constraint.ConstraintLayout>
